@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "warm-cream": "hsl(var(--warm-cream))",
+        "rich-brown": "hsl(var(--rich-brown))",
+        "deep-burgundy": "hsl(var(--deep-burgundy))",
+        "honey-gold": "hsl(var(--honey-gold))",
+        "light-amber": "hsl(var(--light-amber))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
