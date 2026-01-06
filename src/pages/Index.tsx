@@ -101,7 +101,7 @@ const Index = () => {
               <p className="text-muted-foreground mb-6">
                 Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
                 He holds an M.A. degree in viola performance from State University of New York at Stony Brook 
-                and served as principal viola in the Savannah Symphony for 13 years.
+                and served as principal viola in the Savannah Symphony, Savannah Philharmonic, and Hilton Head Symphony Orchestra for 35 years.
               </p>
               <p className="text-muted-foreground mb-6">
                 Since 2000, BWL Music has kept students throughout the low country supplied with 
