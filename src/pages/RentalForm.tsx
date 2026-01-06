@@ -49,41 +49,22 @@ const RentalForm = () => {
   };
 
   const getSizeOptions = () => {
-    const instrument = formData.instrumentType;
-    if (instrument === "violin" || instrument === "viola") {
-      return [
-        { value: "1/16", label: "1/16" },
-        { value: "1/10", label: "1/10" },
-        { value: "1/8", label: "1/8" },
-        { value: "1/4", label: "1/4" },
-        { value: "1/2", label: "1/2" },
-        { value: "3/4", label: "3/4" },
-        { value: "4/4", label: "4/4 (Full Size)" },
-      ];
-    } else if (instrument === "cello") {
-      return [
-        { value: "1/8", label: "1/8" },
-        { value: "1/4", label: "1/4" },
-        { value: "1/2", label: "1/2" },
-        { value: "3/4", label: "3/4" },
-        { value: "4/4", label: "4/4 (Full Size)" },
-      ];
-    } else if (instrument === "bass") {
-      return [
-        { value: "1/4", label: "1/4" },
-        { value: "1/2", label: "1/2" },
-        { value: "3/4", label: "3/4" },
-        { value: "4/4", label: "4/4 (Full Size)" },
-      ];
-    }
-    return [];
+    return [
+      { value: "1/16", label: "1/16" },
+      { value: "1/10", label: "1/10" },
+      { value: "1/8", label: "1/8" },
+      { value: "1/4", label: "1/4" },
+      { value: "1/2", label: "1/2" },
+      { value: "3/4", label: "3/4" },
+      { value: "4/4", label: "4/4 (full size)" },
+    ];
   };
 
   return (
     <div>
       <PageHeader
-        title="Rental Form"
-        subtitle="Fill out this form to start your rental today"
+        title="Fill out this form to start your rental today"
+        subtitle=""
       />
 
       <section className="py-16">
