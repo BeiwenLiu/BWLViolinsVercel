@@ -23,7 +23,7 @@ const Rentals = () => {
           </div>
 
           {/* Rental Prices */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="max-w-xl mx-auto mb-16">
             <div className="card-elegant">
               <div className="flex items-center gap-3 mb-4">
                 <DollarSign className="h-6 w-6 text-secondary" />
@@ -56,42 +56,6 @@ const Rentals = () => {
                     $15 one-time registration fee for first-time renters
                   </li>
                 </ul>
-              </div>
-            </div>
-
-            <div className="card-elegant border-2 border-secondary relative">
-              <div className="absolute -top-3 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                Flexible Options
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <DollarSign className="h-6 w-6 text-secondary" />
-                <h3 className="font-serif text-2xl font-semibold">Rent to Own</h3>
-              </div>
-              <div className="space-y-4">
-                <p className="text-muted-foreground">
-                  We offer flexible rent-to-own plans tailored to your needs:
-                </p>
-                <ul className="space-y-3 mt-4">
-                  <li className="flex items-start gap-2 text-muted-foreground">
-                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
-                    6-month installment plan available
-                  </li>
-                  <li className="flex items-start gap-2 text-muted-foreground">
-                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
-                    12-month installment plan available
-                  </li>
-                  <li className="flex items-start gap-2 text-muted-foreground">
-                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
-                    Size exchanges qualify during the rental period
-                  </li>
-                  <li className="flex items-start gap-2 text-muted-foreground">
-                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
-                    Custom plans available to fit your budget
-                  </li>
-                </ul>
-                <p className="text-sm text-muted-foreground mt-4 pt-4 border-t border-border">
-                  Contact us for more details—we can work with you to create a plan that fits your specific needs.
-                </p>
               </div>
             </div>
           </div>

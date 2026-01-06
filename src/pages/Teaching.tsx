@@ -37,8 +37,7 @@ const Teaching = () => {
                   <ul className="text-sm text-muted-foreground space-y-2">
                     <li>• Teaching Assistant at NYU Stony Brook</li>
                     <li>• Former Professor of Viola at Central Conservatory of Music Beijing</li>
-                    <li>• Principal Viola, Savannah Symphony (13 years)</li>
-                    <li>• Principal Viola, Hilton Head Orchestra</li>
+                    <li>• Principal Viola, Savannah Symphony, Savannah Philharmonic, Hilton Head Symphony Orchestra (35 years)</li>
                   </ul>
                 </div>
                 <div className="bg-muted p-6 rounded-lg">

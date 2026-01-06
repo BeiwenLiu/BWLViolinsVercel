@@ -6,7 +6,6 @@ import { Music2 } from "lucide-react";
 const violinProducts = [
   { label: "Eastman Instruments", path: "/sales/violins/eastman" },
   { label: "BWL 150", path: "/sales/violins/bwl150" },
-  { label: "BWL 500", path: "/sales/violins/bwl500" },
   { label: "BWL 600", path: "/sales/violins/bwl600" },
   { label: "BWL 1000", path: "/sales/violins/bwl1000" },
   { label: "BWL 1500", path: "/sales/violins/bwl1500" },
