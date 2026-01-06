@@ -6,19 +6,30 @@ import { Music2 } from "lucide-react";
 const violinProducts = [
   { label: "Eastman Instruments", path: "/sales/violins/eastman" },
   { label: "BWL 150", path: "/sales/violins/bwl150" },
-  { label: "BWL 200", path: "/sales/violins/bwl200" },
-  { label: "BWL 300", path: "/sales/violins/bwl300" },
   { label: "BWL 500", path: "/sales/violins/bwl500" },
+  { label: "BWL 600", path: "/sales/violins/bwl600" },
   { label: "BWL 1000", path: "/sales/violins/bwl1000" },
-  { label: 'BWL "Collection"', path: "/sales/violins/bwl-collection" },
+  { label: "BWL 1500", path: "/sales/violins/bwl1500" },
   { label: "German Violins", path: "/sales/violins/german" },
   { label: "Romanian Instruments", path: "/sales/violins/romanian" },
+  { label: "Italian Violins", path: "/sales/violins/italian" },
   { label: "Art Violins", path: "/sales/violins/art" },
 ];
 
-const otherStrings = [
-  { label: "Viola", path: "/sales/viola" },
-  { label: "Cello", path: "/sales/cello" },
+const violas = [
+  { label: "Romanian Violas", path: "/sales/violas/romanian" },
+  { label: "German Violas", path: "/sales/violas/german" },
+  { label: "Japanese Violas", path: "/sales/violas/japanese" },
+  { label: "Chinese Violas", path: "/sales/violas/chinese" },
+];
+
+const cellos = [
+  { label: "Romanian Cellos", path: "/sales/cellos/romanian" },
+  { label: "German Cellos", path: "/sales/cellos/german" },
+  { label: "Chinese Cellos", path: "/sales/cellos/chinese" },
+];
+
+const bass = [
   { label: "Bass", path: "/sales/bass" },
 ];
 
@@ -53,9 +64,23 @@ const Sales = () => {
             />
 
             <CategoryCard
-              title="Viola, Cello & Bass"
-              description="Quality instruments for the complete string section"
-              items={otherStrings}
+              title="Violas"
+              description="Quality violas for the discerning musician"
+              items={violas}
+              icon={<Music2 className="h-6 w-6" />}
+            />
+
+            <CategoryCard
+              title="Cellos"
+              description="Professional cellos from around the world"
+              items={cellos}
+              icon={<Music2 className="h-6 w-6" />}
+            />
+
+            <CategoryCard
+              title="Bass"
+              description="Quality bass instruments"
+              items={bass}
               icon={<Music2 className="h-6 w-6" />}
             />
 

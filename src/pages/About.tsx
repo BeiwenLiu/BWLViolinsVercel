@@ -20,8 +20,10 @@ const About = () => {
   ];
 
   const schools = [
-    "Gasden", "Charles Ellis", "May Howard", "Calvary", "Country Day School",
-    "Bloomingdale", "Blessed Sacrament", "McRiley", "Heard", "St. Andrews", "Isle of Hope"
+    "Garrison", "Charles Ellis", "May Howard", "Calvary", "Country Day School",
+    "Bloomingdale", "Blessed Sacrament", "McRiley", "Heard", "St. Andrews", "Isle of Hope",
+    "Richmond Hill High School", "Richmond Hill Middle School", "Savannah Habersham",
+    "Savannah Philharmonic Youth Orchestra Program"
   ];
 
   return (
@@ -40,7 +42,7 @@ const About = () => {
               <p className="text-muted-foreground mb-4">
                 Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
                 He has an M.A. degree in viola performance from State University of New York at Stony Brook. 
-                Lizhou held the position of principal viola in the Savannah Symphony for 13 years and 
+                Lizhou held the position of principal viola in the Savannah Symphony for 35 years and 
                 retains that position in the Hilton Head Orchestra.
               </p>
               <p className="text-muted-foreground mb-4">
@@ -93,15 +95,9 @@ const About = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
-                    <div>
-                      <a href="tel:912-596-3897" className="hover:text-primary transition-colors">
-                        (912) 596-3897
-                      </a>
-                      <span className="text-muted-foreground"> or </span>
-                      <a href="tel:912-303-9522" className="hover:text-primary transition-colors">
-                        (912) 303-9522
-                      </a>
-                    </div>
+                    <a href="tel:912-596-3897" className="hover:text-primary transition-colors">
+                      (912) 596-3897
+                    </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-secondary flex-shrink-0" />

@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const RentalForm = () => {
   const { toast } = useToast();
@@ -25,17 +25,11 @@ const RentalForm = () => {
     state: "",
     zip: "",
     country: "",
-    driversLicense: "",
     email: "",
     homePhone: "",
     cellPhone: "",
-    workPhone: "",
-    faxNumber: "",
-    schoolTeacher: "",
+    instrumentType: "",
     instrumentSize: "",
-    rentOrPurchase: "",
-    creditCardNumber: "",
-    expirationDate: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,15 +48,52 @@ const RentalForm = () => {
     });
   };
 
+  const getSizeOptions = () => {
+    const instrument = formData.instrumentType;
+    if (instrument === "violin" || instrument === "viola") {
+      return [
+        { value: "1/16", label: "1/16" },
+        { value: "1/10", label: "1/10" },
+        { value: "1/8", label: "1/8" },
+        { value: "1/4", label: "1/4" },
+        { value: "1/2", label: "1/2" },
+        { value: "3/4", label: "3/4" },
+        { value: "4/4", label: "4/4 (Full Size)" },
+      ];
+    } else if (instrument === "cello") {
+      return [
+        { value: "1/8", label: "1/8" },
+        { value: "1/4", label: "1/4" },
+        { value: "1/2", label: "1/2" },
+        { value: "3/4", label: "3/4" },
+        { value: "4/4", label: "4/4 (Full Size)" },
+      ];
+    } else if (instrument === "bass") {
+      return [
+        { value: "1/4", label: "1/4" },
+        { value: "1/2", label: "1/2" },
+        { value: "3/4", label: "3/4" },
+        { value: "4/4", label: "4/4 (Full Size)" },
+      ];
+    }
+    return [];
+  };
+
   return (
     <div>
       <PageHeader
-        title="Rental & Purchase Form"
-        subtitle="Fill out this form to start your rental or purchase today"
+        title="Rental Form"
+        subtitle="Fill out this form to start your rental today"
       />
 
       <section className="py-16">
         <div className="container max-w-4xl">
+          <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mb-8 text-center">
+            <p className="text-muted-foreground">
+              After we receive your information, you will receive an official rental form from us via email.
+            </p>
+          </div>
+
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Personal Information */}
             <div className="card-elegant">
@@ -170,15 +201,6 @@ const RentalForm = () => {
               <h2 className="font-serif text-xl font-semibold mb-6">Contact Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="driversLicense">Driver's License Number</Label>
-                  <Input
-                    id="driversLicense"
-                    name="driversLicense"
-                    value={formData.driversLicense}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
                   <Input
                     id="email"
@@ -210,25 +232,6 @@ const RentalForm = () => {
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="workPhone">Work Phone</Label>
-                  <Input
-                    id="workPhone"
-                    name="workPhone"
-                    type="tel"
-                    value={formData.workPhone}
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="faxNumber">Fax Number</Label>
-                  <Input
-                    id="faxNumber"
-                    name="faxNumber"
-                    value={formData.faxNumber}
-                    onChange={handleChange}
-                  />
-                </div>
               </div>
             </div>
 
@@ -236,85 +239,51 @@ const RentalForm = () => {
             <div className="card-elegant">
               <h2 className="font-serif text-xl font-semibold mb-6">Instrument Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="schoolTeacher">School and Strings Teacher</Label>
-                  <Input
-                    id="schoolTeacher"
-                    name="schoolTeacher"
-                    value={formData.schoolTeacher}
-                    onChange={handleChange}
-                  />
+                <div className="space-y-2">
+                  <Label htmlFor="instrumentType">Instrument Type *</Label>
+                  <Select
+                    value={formData.instrumentType}
+                    onValueChange={(value) => {
+                      handleSelectChange("instrumentType", value);
+                      handleSelectChange("instrumentSize", "");
+                    }}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select instrument" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="violin">Violin</SelectItem>
+                      <SelectItem value="viola">Viola</SelectItem>
+                      <SelectItem value="cello">Cello</SelectItem>
+                      <SelectItem value="bass">Bass</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="instrumentSize">Violin/Viola/Cello Size *</Label>
+                  <Label htmlFor="instrumentSize">Size *</Label>
                   <Select
                     value={formData.instrumentSize}
                     onValueChange={(value) => handleSelectChange("instrumentSize", value)}
+                    disabled={!formData.instrumentType}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Select size" />
+                      <SelectValue placeholder={formData.instrumentType ? "Select size" : "Select instrument first"} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="1/16">1/16</SelectItem>
-                      <SelectItem value="1/10">1/10</SelectItem>
-                      <SelectItem value="1/8">1/8</SelectItem>
-                      <SelectItem value="1/4">1/4</SelectItem>
-                      <SelectItem value="1/2">1/2</SelectItem>
-                      <SelectItem value="3/4">3/4</SelectItem>
-                      <SelectItem value="4/4">4/4 (Full Size)</SelectItem>
+                      {getSizeOptions().map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="rentOrPurchase">Rent or Purchase *</Label>
-                  <Select
-                    value={formData.rentOrPurchase}
-                    onValueChange={(value) => handleSelectChange("rentOrPurchase", value)}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select option" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="rent">Rent</SelectItem>
-                      <SelectItem value="rent-to-own">Rent to Own</SelectItem>
-                      <SelectItem value="purchase">Purchase</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </div>
-
-            {/* Payment Information */}
-            <div className="card-elegant">
-              <h2 className="font-serif text-xl font-semibold mb-6">Payment Information</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="creditCardNumber">Credit Card Number *</Label>
-                  <Input
-                    id="creditCardNumber"
-                    name="creditCardNumber"
-                    value={formData.creditCardNumber}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="expirationDate">Expiration Date *</Label>
-                  <Input
-                    id="expirationDate"
-                    name="expirationDate"
-                    placeholder="MM/YY"
-                    value={formData.expirationDate}
-                    onChange={handleChange}
-                    required
-                  />
                 </div>
               </div>
             </div>
 
             <div className="text-center">
               <Button type="submit" size="lg" className="px-12">
-                Submit Application
+                Submit
               </Button>
             </div>
           </form>
@@ -334,10 +303,6 @@ const RentalForm = () => {
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-secondary" />
                 <span>8312 Kent Drive, Savannah, GA 31406</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="h-5 w-5 text-secondary" />
-                <span>(912) 596-3897 or (912) 303-9522</span>
               </div>
             </div>
           </div>

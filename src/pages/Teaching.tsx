@@ -1,13 +1,6 @@
 import PageHeader from "@/components/ui/PageHeader";
-import { GraduationCap, Clock, DollarSign, Music } from "lucide-react";
 
 const Teaching = () => {
-  const tuitionRates = [
-    { duration: "30 minutes", price: "$35" },
-    { duration: "45 minutes", price: "$50" },
-    { duration: "1 hour", price: "$65" },
-  ];
-
   const rules = [
     "Students will work hard and arrive fully prepared for their lesson.",
     "Students will have weekly lessons from Sept. 1 to May 31 (except two weeks vacation of Christmas).",
@@ -15,8 +8,7 @@ const Teaching = () => {
     "If students come late, they will have a shorter lesson.",
     "If students can't make the lesson, they will inform the teacher at least 12 hours before the scheduled time (except illness). If students don't show, the teacher will still get paid.",
     "Students will be required to play in two class recitals each year (Christmas and spring).",
-    "Students are responsible for the cost of the piano accompanist (usually $15 covers Suzuki book 1-3, $25 covers Suzuki book 4 and above including concertos).",
-    "Tuition will be paid to the teacher by the month and should be received the first week of each month (based on number of weeks).",
+    "Students are responsible for the cost of the piano accompanist ($25 covers Suzuki book 1-3, $35 and up for Suzuki book 4 and above including concertos).",
   ];
 
   return (
@@ -62,30 +54,9 @@ const Teaching = () => {
             </div>
           </div>
 
-          {/* Tuition Rates */}
-          <div className="max-w-xl mx-auto mb-16">
-            <h2 className="section-heading text-center">Tuition Rates</h2>
-            <div className="card-elegant">
-              {tuitionRates.map((rate, index) => (
-                <div
-                  key={rate.duration}
-                  className={`flex justify-between items-center py-4 ${
-                    index !== tuitionRates.length - 1 ? "border-b border-border" : ""
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-secondary" />
-                    <span className="font-medium">{rate.duration}</span>
-                  </div>
-                  <span className="text-2xl font-semibold text-primary">{rate.price}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Rules */}
           <div className="max-w-3xl mx-auto">
-            <h2 className="section-heading text-center">Regulation and Rules</h2>
+            <h2 className="section-heading text-center">Class Information</h2>
             <div className="card-elegant">
               <ul className="space-y-4">
                 {rules.map((rule, index) => (

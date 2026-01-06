@@ -3,10 +3,10 @@ import { Wrench, CheckCircle } from "lucide-react";
 
 const Service = () => {
   const bowRehairPrices = [
-    { instrument: "Violin", price: "$40" },
-    { instrument: "Viola", price: "$50" },
-    { instrument: "Cello", price: "$60" },
-    { instrument: "Bass", price: "$75" },
+    { instrument: "Violin", price: "$55" },
+    { instrument: "Viola", price: "$60" },
+    { instrument: "Cello", price: "$65" },
+    { instrument: "Bass", price: "$85" },
   ];
 
   const repairServices = [
@@ -72,16 +72,6 @@ const Service = () => {
                 ))}
               </ul>
             </div>
-          </div>
-
-          {/* Special Note */}
-          <div className="mt-12 bg-gradient-to-br from-secondary/10 to-accent/10 p-8 rounded-lg">
-            <h3 className="font-serif text-xl font-semibold mb-4">eBay Instruments Welcome!</h3>
-            <p className="text-muted-foreground">
-              Past customers have brought us "eBay" purchased violins and we have set them up 
-              into beautiful sounding instruments. If you've purchased an instrument online and 
-              need professional setup, we're here to help.
-            </p>
           </div>
 
           {/* Contact */}
