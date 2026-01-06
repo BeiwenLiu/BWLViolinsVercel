@@ -225,14 +225,13 @@ const RentalForm = () => {
                   <Select
                     value={formData.instrumentType}
                     onValueChange={(value) => {
-                      handleSelectChange("instrumentType", value);
-                      handleSelectChange("instrumentSize", "");
+                      setFormData(prev => ({ ...prev, instrumentType: value, instrumentSize: "" }));
                     }}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger id="instrumentType">
                       <SelectValue placeholder="Select instrument" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-background z-50">
                       <SelectItem value="violin">Violin</SelectItem>
                       <SelectItem value="viola">Viola</SelectItem>
                       <SelectItem value="cello">Cello</SelectItem>
@@ -244,13 +243,13 @@ const RentalForm = () => {
                   <Label htmlFor="instrumentSize">Size *</Label>
                   <Select
                     value={formData.instrumentSize}
-                    onValueChange={(value) => handleSelectChange("instrumentSize", value)}
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, instrumentSize: value }))}
                     disabled={!formData.instrumentType}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger id="instrumentSize">
                       <SelectValue placeholder={formData.instrumentType ? "Select size" : "Select instrument first"} />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-background z-50">
                       {getSizeOptions().map((option) => (
                         <SelectItem key={option.value} value={option.value}>
                           {option.label}
