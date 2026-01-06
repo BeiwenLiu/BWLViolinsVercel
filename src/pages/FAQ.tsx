@@ -8,10 +8,6 @@ import {
 
 const faqs = [
   {
-    question: "Why must we charge the credit card for the first three months rental?",
-    answer: "We use the credit card for security reasons since we do not take deposit for the rental.",
-  },
-  {
     question: "Why are BWL rental instruments priced so low compared to other local music stores?",
     answer: "1) We do not have many employees nor do we have location rental expenses. 2) Most of our instruments come directly from their makers.",
   },

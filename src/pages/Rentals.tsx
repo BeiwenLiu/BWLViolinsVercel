@@ -16,7 +16,7 @@ const Rentals = () => {
           {/* Intro */}
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-lg text-muted-foreground">
-              We rent all sizes of violins, violas and cellos from 1/16 size to full size. 
+              We rent all sizes of violins, violas, cellos and basses from 1/16 size to full size. 
               All instruments come with a bow, a case and rosin. No charge for changing sizes. 
               Most repairs are free.
             </p>
@@ -32,11 +32,15 @@ const Rentals = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span>Violins & Violas</span>
-                  <span className="text-2xl font-semibold text-primary">$20<span className="text-sm text-muted-foreground">/month</span></span>
+                  <span className="text-2xl font-semibold text-primary">$25<span className="text-sm text-muted-foreground">/month</span></span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span>Cellos</span>
-                  <span className="text-2xl font-semibold text-primary">$30<span className="text-sm text-muted-foreground">/month</span></span>
+                  <span className="text-2xl font-semibold text-primary">$45<span className="text-sm text-muted-foreground">/month</span></span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span>Bass</span>
+                  <span className="text-2xl font-semibold text-primary">$65<span className="text-sm text-muted-foreground">/month</span></span>
                 </div>
                 <ul className="space-y-2 mt-6">
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -57,57 +61,39 @@ const Rentals = () => {
 
             <div className="card-elegant border-2 border-secondary relative">
               <div className="absolute -top-3 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                Best Value
+                Flexible Options
               </div>
               <div className="flex items-center gap-3 mb-4">
                 <DollarSign className="h-6 w-6 text-secondary" />
                 <h3 className="font-serif text-2xl font-semibold">Rent to Own</h3>
               </div>
               <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span>Violins & Violas (2 year)</span>
-                  <span className="text-2xl font-semibold text-primary">$30<span className="text-sm text-muted-foreground">/month</span></span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span>Cellos (2 year)</span>
-                  <span className="text-2xl font-semibold text-primary">$40<span className="text-sm text-muted-foreground">/month</span></span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Size exchanges qualify—start with a smaller size and own a bigger size by the end.
+                <p className="text-muted-foreground">
+                  We offer flexible rent-to-own plans tailored to your needs:
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  Trade completed rent-to-own instrument toward a more advanced instrument: 
-                  <strong> $100 credit</strong> for violins/violas, <strong>$150 credit</strong> for cellos, 
-                  or get <strong>10% off</strong> purchase price.
+                <ul className="space-y-3 mt-4">
+                  <li className="flex items-start gap-2 text-muted-foreground">
+                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                    6-month installment plan available
+                  </li>
+                  <li className="flex items-start gap-2 text-muted-foreground">
+                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                    12-month installment plan available
+                  </li>
+                  <li className="flex items-start gap-2 text-muted-foreground">
+                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                    Size exchanges qualify during the rental period
+                  </li>
+                  <li className="flex items-start gap-2 text-muted-foreground">
+                    <Check className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                    Custom plans available to fit your budget
+                  </li>
+                </ul>
+                <p className="text-sm text-muted-foreground mt-4 pt-4 border-t border-border">
+                  Contact us for more details—we can work with you to create a plan that fits your specific needs.
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Rental Instruments */}
-          <h2 className="section-heading text-center mb-8">Available Rentals</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
-            <Link
-              to="/rentals/violin-viola"
-              className="card-elegant text-center group hover:border-secondary transition-colors"
-            >
-              <h3 className="font-serif text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                BWL 200 Violin & Viola
-              </h3>
-              <p className="text-3xl font-bold text-secondary mb-2">$20<span className="text-base font-normal text-muted-foreground">/month</span></p>
-              <p className="text-sm text-muted-foreground">All sizes available</p>
-            </Link>
-
-            <Link
-              to="/rentals/cello"
-              className="card-elegant text-center group hover:border-secondary transition-colors"
-            >
-              <h3 className="font-serif text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                BWL 500 Cello
-              </h3>
-              <p className="text-3xl font-bold text-secondary mb-2">$30<span className="text-base font-normal text-muted-foreground">/month</span></p>
-              <p className="text-sm text-muted-foreground">All sizes available</p>
-            </Link>
           </div>
 
           {/* CTA */}
