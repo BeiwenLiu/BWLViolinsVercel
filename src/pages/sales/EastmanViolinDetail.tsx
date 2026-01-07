@@ -5,6 +5,12 @@ import { useState } from "react";
 
 import vl145Front from "@/assets/eastman/vl145-front.avif";
 import vl145Back from "@/assets/eastman/vl145-back.avif";
+import vl405Front from "@/assets/eastman/vl405-front.avif";
+import vl405Back from "@/assets/eastman/vl405-back.avif";
+import vl601Front from "@/assets/eastman/vl601-front.avif";
+import vl601Back from "@/assets/eastman/vl601-back.avif";
+import vl701Front from "@/assets/eastman/vl701-front.avif";
+import vl701Back from "@/assets/eastman/vl701-back.avif";
 
 interface ViolinSpecs {
   finish: string;
@@ -48,6 +54,72 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and violas 
       electronics: "Series+ preinstalled pickup system, 10' 3.5mm to 1/4\" cable included",
       availablePatterns: "Stradivari",
       availableSizes: "4/4 - 1/4",
+    },
+  },
+  vl405: {
+    id: "vl405",
+    name: "Andreas Eastman Series+ VL405+",
+    description: `While plugged in the Series+ 405 violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Andreas Eastman violins feature a varnish that emulates the exceptional varnishes from master workshops in Markneukirchen, Germany a century ago. These workshops distinguished themselves by developing some of the best varnishes of the modern era, and we have employed their varnish recipes and techniques to achieve old-world results.
+
+The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge. Our proprietary 3.5 mm jack is used as the end button on the violins and violin's making it unnoticeable.
+
+Each Series+ instrument comes with a lightweight, low-profile cable that provides a seamless connection to your amplifier or individual playing setup, making this the easiest and most comfortable design to "plug in" on the market.`,
+    images: [vl405Front, vl405Back],
+    specs: {
+      finish: "Antiqued Spirit Varnish",
+      fingerboard: "Ebony",
+      top: "Spruce",
+      backRibs: "Maple",
+      purfling: "Genuine Hand-inlaid",
+      bridge: "Despiau 2 Tree",
+      fittings: "Boxwood with Ebony Trim",
+      electronics: "Series+ preinstalled pickup system, 10' 3.5mm to 1/4\" cable included",
+      availablePatterns: "Stradivari",
+      availableSizes: "4/4 - 1/2",
+    },
+  },
+  vl601: {
+    id: "vl601",
+    name: "Albert Nebel Series+ VL601+",
+    description: `While plugged in, the Albert Nebel 601+ violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Albert Nebel violins, violas, and cellos provide famous quality at a modest price. These instruments are crafted from aged European tonewoods and are varnished by hand in the Eastman workshop.
+
+The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge. Our proprietary 3.5 mm jack is used as the end button on the violins and violas making it unnoticeable.
+
+Each Series+ instrument comes with a lightweight, low-profile cable that provides a seamless connection to your amplifier or individual playing setup, making this the easiest and most comfortable design to "plug in" on the market.`,
+    images: [vl601Front, vl601Back],
+    specs: {
+      finish: "Antiqued Spirit Varnish",
+      fingerboard: "Ebony",
+      top: "German Spruce",
+      backRibs: "German Maple",
+      purfling: "Genuine Hand-inlaid",
+      bridge: "Despiau 2 Tree",
+      fittings: "Ebony",
+      electronics: "Series+ preinstalled pickup system, 10' 3.5mm to 1/4\" cable included",
+      availablePatterns: "Guarneri",
+      availableSizes: "4/4",
+    },
+  },
+  vl701: {
+    id: "vl701",
+    name: "Rudoulf Doetsch Series+ VL701+",
+    description: `While plugged in, the Rudoulf Doetsch+ 701 violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Rudoulf Doetsch instruments are handcrafted by our master luthiers and are hailed by teachers and performers as some of America's best German tonewood instruments. They feature a highly select spruce top with maple back, sides and scrolls, and a hand applied antique-style, multi-layer spirit varnish. The result is an instrument that is professional in both appearance and sound.
+
+Rudoulf Doetsch violins, violas, and cellos provide famous quality at a modest price. These instruments are crafted from aged European tonewoods and are varnished by hand in the Eastman workshop. The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge.
+
+Our proprietary 3.5 mm jack is used as the end button on the violins and viola's making it unnoticeable. Each Series+ instrument comes with a lightweight, low-profile cable that provides a seamless connection to your amplifier or individual playing setup, making this the easiest and most comfortable design to "plug in" on the market.`,
+    images: [vl701Front, vl701Back],
+    specs: {
+      finish: "Antiqued Spirit Varnish",
+      fingerboard: "Ebony",
+      top: "German Spruce",
+      backRibs: "German Maple",
+      purfling: "Genuine Hand-inlaid",
+      bridge: "Despiau 2 Tree",
+      fittings: "Ebony",
+      electronics: "Series+ preinstalled pickup system, 10' 3.5mm to 1/4\" cable included",
+      availablePatterns: "Guarneri",
+      availableSizes: "4/4",
     },
   },
 };

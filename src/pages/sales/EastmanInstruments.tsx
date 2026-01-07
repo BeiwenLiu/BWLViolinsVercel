@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 
 import vl145Front from "@/assets/eastman/vl145-front.avif";
+import vl405Front from "@/assets/eastman/vl405-front.avif";
+import vl601Front from "@/assets/eastman/vl601-front.avif";
+import vl701Front from "@/assets/eastman/vl701-front.avif";
 
 interface EastmanViolin {
   id: string;
@@ -18,6 +21,24 @@ const eastmanViolins: EastmanViolin[] = [
     name: "Samuel Eastman Series+ VL145+",
     shortDescription: "Electric-acoustic violin with Series+ preinstalled pickup system",
     image: vl145Front,
+  },
+  {
+    id: "vl405",
+    name: "Andreas Eastman Series+ VL405+",
+    shortDescription: "Premium violin with antiqued spirit varnish and German-style finishing",
+    image: vl405Front,
+  },
+  {
+    id: "vl601",
+    name: "Albert Nebel Series+ VL601+",
+    shortDescription: "Professional quality with aged European tonewoods and Guarneri pattern",
+    image: vl601Front,
+  },
+  {
+    id: "vl701",
+    name: "Rudoulf Doetsch Series+ VL701+",
+    shortDescription: "Master luthier crafted with German tonewoods and professional finish",
+    image: vl701Front,
   },
 ];
 
