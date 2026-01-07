@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Sales from "./pages/Sales";
 import EastmanInstruments from "./pages/sales/EastmanInstruments";
 import EastmanViolinDetail from "./pages/sales/EastmanViolinDetail";
+import InstrumentInquiry from "./pages/sales/InstrumentInquiry";
 import Rentals from "./pages/Rentals";
 import Service from "./pages/Service";
 import Teaching from "./pages/Teaching";
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/sales" element={<Sales />} />
             <Route path="/sales/violins/eastman" element={<EastmanInstruments />} />
             <Route path="/sales/violins/eastman/:modelId" element={<EastmanViolinDetail />} />
+            <Route path="/sales/inquiry" element={<InstrumentInquiry />} />
             <Route path="/sales/*" element={<Sales />} />
             <Route path="/rentals" element={<Rentals />} />
             <Route path="/rentals/*" element={<Rentals />} />

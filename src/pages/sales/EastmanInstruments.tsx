@@ -43,11 +43,11 @@ const EastmanInstruments = () => {
             {eastmanViolins.map((violin) => (
               <Link key={violin.id} to={`/sales/violins/eastman/${violin.id}`}>
                 <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="aspect-[4/5] overflow-hidden bg-muted">
+                  <div className="aspect-[4/5] overflow-hidden bg-muted flex items-center justify-center p-4">
                     <img
                       src={violin.image}
                       alt={violin.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <CardContent className="p-6">
