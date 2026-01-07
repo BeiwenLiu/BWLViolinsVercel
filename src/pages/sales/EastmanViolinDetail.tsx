@@ -85,20 +85,20 @@ const EastmanViolinDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="aspect-[4/5] overflow-hidden rounded-lg bg-muted">
+              <div className="rounded-lg bg-muted flex items-center justify-center p-4">
                 <img
                   src={violin.images[selectedImage]}
                   alt={`${violin.name} - View ${selectedImage + 1}`}
-                  className="w-full h-full object-cover"
+                  className="max-w-full max-h-[600px] w-auto h-auto object-contain"
                 />
               </div>
               {violin.images.length > 1 && (
-                <div className="flex gap-4">
+                <div className="flex gap-4 justify-center">
                   {violin.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
-                      className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors ${
+                      className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors flex items-center justify-center bg-muted p-1 ${
                         selectedImage === index
                           ? "border-primary"
                           : "border-transparent hover:border-muted-foreground/50"
@@ -107,7 +107,7 @@ const EastmanViolinDetail = () => {
                       <img
                         src={image}
                         alt={`${violin.name} - Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
+                        className="max-w-full max-h-full object-contain"
                       />
                     </button>
                   ))}
@@ -176,7 +176,7 @@ const EastmanViolinDetail = () => {
 
               <div className="pt-4">
                 <Link
-                  to="/rental-form"
+                  to={`/sales/inquiry?instrument=${encodeURIComponent(violin.name)}`}
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg"
                 >
                   Inquire About This Instrument
