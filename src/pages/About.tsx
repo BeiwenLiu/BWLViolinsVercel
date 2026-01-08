@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageHeader from "@/components/ui/PageHeader";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import lizhouImage from "@/assets/lizhou-single.jpg";
 
 const About = () => {
   const directions = [
@@ -39,21 +40,32 @@ const About = () => {
           <div className="max-w-4xl mx-auto mb-16">
             <div className="card-elegant">
               <h2 className="font-serif text-2xl font-semibold mb-6">About Lizhou Liu</h2>
-              <p className="text-muted-foreground mb-4">
-                Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
-                He has an M.A. degree in viola performance from State University of New York at Stony Brook. 
-                Lizhou held the position of principal viola in the Savannah Symphony, Savannah Philharmonic, 
-                and Hilton Head Symphony Orchestra for 35 years.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                He also maintains a large and successful teaching studio as well as managing a violin 
-                rental and sales business. Lizhou combines his musical knowledge of the instruments 
-                with a true love of teaching students.
-              </p>
-              <p className="text-muted-foreground">
-                Since 2000 he has kept students throughout the low country supplied with just the right 
-                equipment to train them to attain a high level of string performance.
-              </p>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex-shrink-0 mx-auto md:mx-0">
+                  <img
+                    src={lizhouImage}
+                    alt="Lizhou Liu"
+                    className="w-48 h-auto rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <p className="text-muted-foreground mb-4">
+                    Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
+                    He has an M.A. degree in viola performance from State University of New York at Stony Brook. 
+                    Lizhou held the position of principal viola in the Savannah Symphony, Savannah Philharmonic, 
+                    and Hilton Head Symphony Orchestra for 35 years.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    He also maintains a large and successful teaching studio as well as managing a violin 
+                    rental and sales business. Lizhou combines his musical knowledge of the instruments 
+                    with a true love of teaching students.
+                  </p>
+                  <p className="text-muted-foreground">
+                    Since 2000 he has kept students throughout the low country supplied with just the right 
+                    equipment to train them to attain a high level of string performance.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
