@@ -11,10 +11,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const RentalForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -36,16 +38,49 @@ const RentalForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Form Submitted",
-      description: "Thank you! We will contact you shortly.",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-rental-form", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Form Submitted Successfully!",
+        description: "We will contact you shortly with the official rental form.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        studentName: "",
+        addressLine1: "",
+        addressLine2: "",
+        city: "",
+        state: "",
+        zip: "",
+        country: "",
+        email: "",
+        homePhone: "",
+        cellPhone: "",
+        instrumentType: "",
+        instrumentSize: "",
+      });
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Error",
+        description: "There was an error submitting your form. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const getSizeOptions = () => {
@@ -88,6 +123,7 @@ const RentalForm = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -98,6 +134,7 @@ const RentalForm = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
@@ -107,6 +144,7 @@ const RentalForm = () => {
                     name="studentName"
                     value={formData.studentName}
                     onChange={handleChange}
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -124,6 +162,7 @@ const RentalForm = () => {
                     value={formData.addressLine1}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2 md:col-span-2">
@@ -133,6 +172,7 @@ const RentalForm = () => {
                     name="addressLine2"
                     value={formData.addressLine2}
                     onChange={handleChange}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -143,6 +183,7 @@ const RentalForm = () => {
                     value={formData.city}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -153,6 +194,7 @@ const RentalForm = () => {
                     value={formData.state}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -163,6 +205,7 @@ const RentalForm = () => {
                     value={formData.zip}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -172,6 +215,7 @@ const RentalForm = () => {
                     name="country"
                     value={formData.country}
                     onChange={handleChange}
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -190,6 +234,7 @@ const RentalForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -200,6 +245,7 @@ const RentalForm = () => {
                     type="tel"
                     value={formData.homePhone}
                     onChange={handleChange}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -211,6 +257,7 @@ const RentalForm = () => {
                     value={formData.cellPhone}
                     onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -227,6 +274,7 @@ const RentalForm = () => {
                     onValueChange={(value) => {
                       setFormData(prev => ({ ...prev, instrumentType: value, instrumentSize: "" }));
                     }}
+                    disabled={isSubmitting}
                   >
                     <SelectTrigger id="instrumentType">
                       <SelectValue placeholder="Select instrument" />
@@ -244,7 +292,7 @@ const RentalForm = () => {
                   <Select
                     value={formData.instrumentSize}
                     onValueChange={(value) => setFormData(prev => ({ ...prev, instrumentSize: value }))}
-                    disabled={!formData.instrumentType}
+                    disabled={!formData.instrumentType || isSubmitting}
                   >
                     <SelectTrigger id="instrumentSize">
                       <SelectValue placeholder={formData.instrumentType ? "Select size" : "Select instrument first"} />
@@ -262,8 +310,15 @@ const RentalForm = () => {
             </div>
 
             <div className="text-center">
-              <Button type="submit" size="lg" className="px-12">
-                Submit
+              <Button type="submit" size="lg" className="px-12" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  "Submit"
+                )}
               </Button>
             </div>
           </form>
