@@ -1,4 +1,5 @@
 import PageHeader from "@/components/ui/PageHeader";
+import lizhouYvonneImage from "@/assets/lizhou-yvonne.jpg";
 
 const Teaching = () => {
   const rules = [
@@ -26,7 +27,16 @@ const Teaching = () => {
               <h2 className="font-serif text-2xl font-semibold mb-6 text-center">
                 Yvonne Johnson & Lizhou Liu's Teaching Studio
               </h2>
-              <p className="text-muted-foreground mb-6">
+              
+              <div className="flex justify-center mb-8">
+                <img
+                  src={lizhouYvonneImage}
+                  alt="Yvonne Johnson and Lizhou Liu"
+                  className="w-72 h-auto rounded-lg shadow-lg object-cover"
+                />
+              </div>
+              
+              <p className="text-muted-foreground mb-6 text-center max-w-2xl mx-auto">
                 Lizhou is joined by his wife, Yvonne, for teaching endeavors. They both have 
                 Master of Music degrees from world renowned conservatories and have years of 
                 experience teaching all levels and ages of students.
