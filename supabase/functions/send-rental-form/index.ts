@@ -61,7 +61,7 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "BWL Violins Contact Form <[email protected]>",
+      from: "BWL Violins Contact Form <contact@send.bwlviolins.com>",
       to: ["BWLViolins@juno.com"],
       subject: `New Rental Request from ${formData.firstName} ${formData.lastName}`,
       html: emailHtml,
