@@ -12,7 +12,7 @@ interface ViolinProduct {
   id: string;
   name: string;
   shortDescription: string;
-  image: string;
+  image?: string;
 }
 
 const violinProducts: ViolinProduct[] = [
@@ -39,6 +39,51 @@ const violinProducts: ViolinProduct[] = [
     name: "Rudoulf Doetsch Series+ VL701+",
     shortDescription: "Master luthier crafted with German tonewoods and professional finish",
     image: vl701Front,
+  },
+  {
+    id: "art",
+    name: "Art",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "bwl-600",
+    name: "BWL 600",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "bwl-1000",
+    name: "BWL 1000",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "dimitri",
+    name: "Dimitri",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "gioveini-sapiro",
+    name: "Gioveini Sapiro Naples 1902",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "hiroshi-kono",
+    name: "Hiroshi Kono",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "joe-farley",
+    name: "Joe Farley",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "jurgen-klier",
+    name: "Jurgen Klier",
+    shortDescription: "Description coming soon",
+  },
+  {
+    id: "lh",
+    name: "L&H",
+    shortDescription: "Description coming soon",
   },
 ];
 
@@ -72,14 +117,18 @@ const Sales = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {violinProducts.map((violin) => (
-                <Link key={violin.id} to={`/sales/violins/eastman/${violin.id}`}>
+                <Link key={violin.id} to={`/sales/violins/${violin.id}`}>
                   <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
                     <div className="aspect-[4/5] overflow-hidden bg-muted flex items-center justify-center p-4">
-                      <img
-                        src={violin.image}
-                        alt={violin.name}
-                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
+                      {violin.image ? (
+                        <img
+                          src={violin.image}
+                          alt={violin.name}
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <Music2 className="h-24 w-24 text-primary/30" />
+                      )}
                     </div>
                     <CardContent className="p-6">
                       <h3 className="font-serif text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
