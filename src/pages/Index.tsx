@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Music2, Wrench, GraduationCap, FileText } from "lucide-react";
+import { ArrowRight, Music2, Wrench, GraduationCap, FileText, Construction } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-violin.jpg";
+import lizhouImage from "@/assets/lizhou-single.jpg";
 
 const Index = () => {
   return (
     <div>
+      {/* Under Construction Banner */}
+      <div className="bg-honey-gold/90 text-rich-brown py-3 px-4">
+        <div className="container flex items-center justify-center gap-2 text-sm font-medium">
+          <Construction className="h-4 w-4" />
+          <span>Our website is currently under construction. More products coming soon!</span>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center">
         <div
@@ -95,29 +104,38 @@ const Index = () => {
       {/* About Preview */}
       <section className="py-20 bg-muted">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="section-heading">About Lizhou Liu</h2>
-              <p className="text-muted-foreground mb-6">
-                Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
-                He holds an M.A. degree in viola performance from State University of New York at Stony Brook 
-                and served as principal viola in the Savannah Symphony, Savannah Philharmonic, and Hilton Head Symphony Orchestra for 35 years.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Since 2000, BWL Music has kept students throughout the low country supplied with 
-                just the right equipment to train them to attain a high level of string performance.
-              </p>
-              <Button asChild variant="outline">
-                <Link to="/about">
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-            <div className="bg-gradient-to-br from-secondary/20 to-accent/20 p-8 rounded-lg">
-              <blockquote className="text-xl font-serif italic text-foreground">
-                "Combining musical knowledge of the instruments with a true love of teaching students."
-              </blockquote>
-              <cite className="block mt-4 text-muted-foreground">— BWL Music Philosophy</cite>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="section-heading text-center mb-8">About Lizhou Liu</h2>
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-shrink-0 mx-auto md:mx-0">
+                <img
+                  src={lizhouImage}
+                  alt="Lizhou Liu"
+                  className="w-48 h-auto rounded-lg shadow-lg object-cover"
+                />
+              </div>
+              <div className="flex-1">
+                <p className="text-muted-foreground mb-4">
+                  Lizhou Liu is a professional violinist and violist living in Savannah, Georgia. 
+                  He has an M.A. degree in viola performance from State University of New York at Stony Brook. 
+                  Lizhou held the position of principal viola in the Savannah Symphony, Savannah Philharmonic, 
+                  and Hilton Head Symphony Orchestra for 35 years.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  He also maintains a large and successful teaching studio as well as managing a violin 
+                  rental and sales business. Lizhou combines his musical knowledge of the instruments 
+                  with a true love of teaching students.
+                </p>
+                <p className="text-muted-foreground mb-6">
+                  Since 2000 he has kept students throughout the low country supplied with just the right 
+                  equipment to train them to attain a high level of string performance.
+                </p>
+                <Button asChild variant="outline">
+                  <Link to="/about">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
