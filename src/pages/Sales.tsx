@@ -3,10 +3,18 @@ import PageHeader from "@/components/ui/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import { Music2 } from "lucide-react";
 
+// Eastman violin imports
 import vl145Front from "@/assets/eastman/vl145-front.avif";
 import vl405Front from "@/assets/eastman/vl405-front.avif";
 import vl601Front from "@/assets/eastman/vl601-front.avif";
 import vl701Front from "@/assets/eastman/vl701-front.avif";
+
+// Other violin imports
+import artFront from "@/assets/violins/art-front.jpg";
+import bwl600Front from "@/assets/violins/bwl600-front.jpg";
+import bwl1000Front from "@/assets/violins/bwl1000-front.jpg";
+import dimitriFront from "@/assets/violins/dimitri-front.jpg";
+import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.jpg";
 
 interface ViolinProduct {
   id: string;
@@ -44,26 +52,31 @@ const violinProducts: ViolinProduct[] = [
     id: "art",
     name: "Art",
     shortDescription: "Description coming soon",
+    image: artFront,
   },
   {
     id: "bwl-600",
     name: "BWL 600",
     shortDescription: "Description coming soon",
+    image: bwl600Front,
   },
   {
     id: "bwl-1000",
     name: "BWL 1000",
     shortDescription: "Description coming soon",
+    image: bwl1000Front,
   },
   {
     id: "dimitri",
     name: "Dimitri",
     shortDescription: "Description coming soon",
+    image: dimitriFront,
   },
   {
     id: "gioveini-sapiro",
     name: "Gioveini Sapiro Naples 1902",
     shortDescription: "Description coming soon",
+    image: gioveiniSapiroFront,
   },
   {
     id: "hiroshi-kono",
