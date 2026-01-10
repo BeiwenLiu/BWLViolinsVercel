@@ -24,6 +24,8 @@ import dimitriFront from "@/assets/violins/dimitri-front.png";
 import dimitriBack from "@/assets/violins/dimitri-back.png";
 import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
 import gioveiniSapiroBack from "@/assets/violins/gioveini-sapiro-back.png";
+import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
+import hiroshiKonoBack from "@/assets/violins/hiroshi-kono-back.png";
 
 interface ViolinSpecs {
   finish?: string;
@@ -169,7 +171,7 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
   "hiroshi-kono": {
     id: "hiroshi-kono",
     name: "Hiroshi Kono",
-    images: [],
+    images: [hiroshiKonoFront, hiroshiKonoBack],
     comingSoon: true,
   },
   "joe-farley": {

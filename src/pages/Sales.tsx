@@ -15,6 +15,7 @@ import bwl600Front from "@/assets/violins/bwl600-front.png";
 import bwl1000Front from "@/assets/violins/bwl1000-front.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
+import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
 
 interface ViolinProduct {
   id: string;
@@ -82,6 +83,7 @@ const violinProducts: ViolinProduct[] = [
     id: "hiroshi-kono",
     name: "Hiroshi Kono",
     shortDescription: "Description coming soon",
+    image: hiroshiKonoFront,
   },
   {
     id: "joe-farley",
