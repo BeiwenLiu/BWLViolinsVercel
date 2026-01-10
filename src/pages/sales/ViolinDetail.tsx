@@ -14,16 +14,16 @@ import vl701Front from "@/assets/eastman/vl701-front.avif";
 import vl701Back from "@/assets/eastman/vl701-back.avif";
 
 // Other violin imports
-import artFront from "@/assets/violins/art-front.jpg";
-import artBack from "@/assets/violins/art-back.jpg";
-import bwl600Front from "@/assets/violins/bwl600-front.jpg";
-import bwl600Back from "@/assets/violins/bwl600-back.jpg";
-import bwl1000Front from "@/assets/violins/bwl1000-front.jpg";
-import bwl1000Back from "@/assets/violins/bwl1000-back.jpg";
-import dimitriFront from "@/assets/violins/dimitri-front.jpg";
-import dimitriBack from "@/assets/violins/dimitri-back.jpg";
-import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.jpg";
-import gioveiniSapiroBack from "@/assets/violins/gioveini-sapiro-back.jpg";
+import artFront from "@/assets/violins/art-front.png";
+import artBack from "@/assets/violins/art-back.png";
+import bwl600Front from "@/assets/violins/bwl600-front.png";
+import bwl600Back from "@/assets/violins/bwl600-back.png";
+import bwl1000Front from "@/assets/violins/bwl1000-front.png";
+import bwl1000Back from "@/assets/violins/bwl1000-back.png";
+import dimitriFront from "@/assets/violins/dimitri-front.png";
+import dimitriBack from "@/assets/violins/dimitri-back.png";
+import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
+import gioveiniSapiroBack from "@/assets/violins/gioveini-sapiro-back.png";
 
 interface ViolinSpecs {
   finish?: string;

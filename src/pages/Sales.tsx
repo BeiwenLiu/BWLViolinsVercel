@@ -10,11 +10,11 @@ import vl601Front from "@/assets/eastman/vl601-front.avif";
 import vl701Front from "@/assets/eastman/vl701-front.avif";
 
 // Other violin imports
-import artFront from "@/assets/violins/art-front.jpg";
-import bwl600Front from "@/assets/violins/bwl600-front.jpg";
-import bwl1000Front from "@/assets/violins/bwl1000-front.jpg";
-import dimitriFront from "@/assets/violins/dimitri-front.jpg";
-import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.jpg";
+import artFront from "@/assets/violins/art-front.png";
+import bwl600Front from "@/assets/violins/bwl600-front.png";
+import bwl1000Front from "@/assets/violins/bwl1000-front.png";
+import dimitriFront from "@/assets/violins/dimitri-front.png";
+import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
 
 interface ViolinProduct {
   id: string;
