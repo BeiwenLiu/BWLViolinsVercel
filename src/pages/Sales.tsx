@@ -16,6 +16,9 @@ import bwl1000Front from "@/assets/violins/bwl1000-front.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
+import joeFarleyFront from "@/assets/violins/joe-farley-front.png";
+import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
+import lhFront from "@/assets/violins/lh-front.png";
 
 interface ViolinProduct {
   id: string;
@@ -89,16 +92,19 @@ const violinProducts: ViolinProduct[] = [
     id: "joe-farley",
     name: "Joe Farley",
     shortDescription: "Description coming soon",
+    image: joeFarleyFront,
   },
   {
     id: "jurgen-klier",
     name: "Jurgen Klier",
     shortDescription: "Description coming soon",
+    image: jurgenKlierFront,
   },
   {
     id: "lh",
     name: "L&H",
     shortDescription: "Description coming soon",
+    image: lhFront,
   },
 ];
 

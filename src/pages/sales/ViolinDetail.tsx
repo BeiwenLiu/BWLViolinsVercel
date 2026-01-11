@@ -26,6 +26,12 @@ import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
 import gioveiniSapiroBack from "@/assets/violins/gioveini-sapiro-back.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
 import hiroshiKonoBack from "@/assets/violins/hiroshi-kono-back.png";
+import joeFarleyFront from "@/assets/violins/joe-farley-front.png";
+import joeFarleyBack from "@/assets/violins/joe-farley-back.png";
+import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
+import jurgenKlierBack from "@/assets/violins/jurgen-klier-back.png";
+import lhFront from "@/assets/violins/lh-front.png";
+import lhBack from "@/assets/violins/lh-back.png";
 
 interface ViolinSpecs {
   finish?: string;
@@ -177,19 +183,19 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
   "joe-farley": {
     id: "joe-farley",
     name: "Joe Farley",
-    images: [],
+    images: [joeFarleyFront, joeFarleyBack],
     comingSoon: true,
   },
   "jurgen-klier": {
     id: "jurgen-klier",
     name: "Jurgen Klier",
-    images: [],
+    images: [jurgenKlierFront, jurgenKlierBack],
     comingSoon: true,
   },
   lh: {
     id: "lh",
     name: "L&H",
-    images: [],
+    images: [lhFront, lhBack],
     comingSoon: true,
   },
 };
