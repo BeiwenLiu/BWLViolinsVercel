@@ -1,9 +1,18 @@
 import { Link } from "react-router-dom";
 import PageHeader from "@/components/ui/PageHeader";
-import { Check, DollarSign, ArrowRight } from "lucide-react";
+import { Check, DollarSign, ArrowRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRentalPrices } from "@/hooks/useRentalPrices";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Rentals = () => {
+  const { data: prices, isLoading, error } = useRentalPrices();
+
+  // Fallback prices in case of error
+  const violinsViolas = prices?.violinsViolas ?? 25;
+  const cellos = prices?.cellos ?? 45;
+  const bass = prices?.bass ?? 65;
+
   return (
     <div>
       <PageHeader
@@ -32,15 +41,27 @@ const Rentals = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span>Violins & Violas</span>
-                  <span className="text-2xl font-semibold text-primary">$25<span className="text-sm text-muted-foreground">/month</span></span>
+                  {isLoading ? (
+                    <Skeleton className="h-8 w-24" />
+                  ) : (
+                    <span className="text-2xl font-semibold text-primary">${violinsViolas}<span className="text-sm text-muted-foreground">/month</span></span>
+                  )}
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span>Cellos</span>
-                  <span className="text-2xl font-semibold text-primary">$45<span className="text-sm text-muted-foreground">/month</span></span>
+                  {isLoading ? (
+                    <Skeleton className="h-8 w-24" />
+                  ) : (
+                    <span className="text-2xl font-semibold text-primary">${cellos}<span className="text-sm text-muted-foreground">/month</span></span>
+                  )}
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span>Bass</span>
-                  <span className="text-2xl font-semibold text-primary">$65<span className="text-sm text-muted-foreground">/month</span></span>
+                  {isLoading ? (
+                    <Skeleton className="h-8 w-24" />
+                  ) : (
+                    <span className="text-2xl font-semibold text-primary">${bass}<span className="text-sm text-muted-foreground">/month</span></span>
+                  )}
                 </div>
                 <ul className="space-y-2 mt-6">
                   <li className="flex items-start gap-2 text-sm text-muted-foreground">
