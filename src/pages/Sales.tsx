@@ -29,12 +29,6 @@ interface ViolinProduct {
 
 const violinProducts: ViolinProduct[] = [
   {
-    id: "vl145",
-    name: "Samuel Eastman Series+ VL145+",
-    shortDescription: "Electric-acoustic violin with Series+ preinstalled pickup system",
-    image: vl145Front,
-  },
-  {
     id: "vl405",
     name: "Andreas Eastman Series+ VL405+",
     shortDescription: "Premium violin with antiqued spirit varnish and German-style finishing",
