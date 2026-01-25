@@ -4,8 +4,12 @@ import { ArrowLeft, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 // Eastman imports
-import vl145Front from "@/assets/eastman/vl145-front.avif";
-import vl145Back from "@/assets/eastman/vl145-back.avif";
+import vl80Front from "@/assets/eastman/vl80-front.png";
+import vl80Back from "@/assets/eastman/vl80-back.png";
+import vl100Front from "@/assets/eastman/vl100-front.jpg";
+import vl100Back from "@/assets/eastman/vl100-back.jpg";
+import vl200Front from "@/assets/eastman/vl200-front.jpg";
+import vl200Back from "@/assets/eastman/vl200-back.jpg";
 import vl405Front from "@/assets/eastman/vl405-front.avif";
 import vl405Back from "@/assets/eastman/vl405-back.avif";
 import vl601Front from "@/assets/eastman/vl601-front.avif";
@@ -56,27 +60,23 @@ interface ViolinData {
 }
 
 const violinData: Record<string, ViolinData> = {
-  vl145: {
-    id: "vl145",
-    name: "Samuel Eastman Series+ VL145+",
-    description: `While plugged in, the Series+ Model 145+ violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Ivan Dunov Prelude model VL145 violins provide remarkable sound, visual beauty, sturdiness, playability, and affordability. It is extremely rare to find student-grade instruments constructed of such fine tonewoods.
-
-Other features that make these instruments among the finest inexpensive student models available are the ebony pegs, chinrests, and fingerboards, and inlaid purfling. The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge.
-
-Our proprietary 3.5 mm jack is used as the end button on the violins and violas making it unnoticeable. Each Series+ instrument will come with a lightweight, low-profile cable that provides a seamless connection to your amplifier or individual playing setup, making this the easiest and most comfortable design to "plug in" on the market.`,
-    images: [vl145Front, vl145Back],
-    specs: {
-      finish: "Satin Varnish",
-      fingerboard: "Ebony",
-      top: "Romanian Spruce",
-      backRibs: "Romanian Maple",
-      purfling: "Genuine Hand-inlaid",
-      bridge: "Despiau",
-      fittings: "Ebony",
-      electronics: "Series+ preinstalled pickup system, 10' 3.5mm to 1/4\" cable included",
-      availablePatterns: "Stradivari",
-      availableSizes: "4/4 - 1/4",
-    },
+  vl80: {
+    id: "vl80",
+    name: "Eastman 80",
+    images: [vl80Front, vl80Back],
+    comingSoon: true,
+  },
+  vl100: {
+    id: "vl100",
+    name: "Eastman 100",
+    images: [vl100Front, vl100Back],
+    comingSoon: true,
+  },
+  vl200: {
+    id: "vl200",
+    name: "Eastman 200",
+    images: [vl200Front, vl200Back],
+    comingSoon: true,
   },
   vl405: {
     id: "vl405",
