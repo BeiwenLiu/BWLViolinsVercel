@@ -80,7 +80,7 @@ const violinData: Record<string, ViolinData> = {
   },
   vl405: {
     id: "vl405",
-    name: "Andreas Eastman Series+ VL405+",
+    name: "Andreas Eastman Series+ 405+",
     description: `While plugged in the Series+ 405 violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Andreas Eastman violins feature a varnish that emulates the exceptional varnishes from master workshops in Markneukirchen, Germany a century ago. These workshops distinguished themselves by developing some of the best varnishes of the modern era, and we have employed their varnish recipes and techniques to achieve old-world results.
 
 The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge. Our proprietary 3.5 mm jack is used as the end button on the violins and violin's making it unnoticeable.
@@ -102,7 +102,7 @@ Each Series+ instrument comes with a lightweight, low-profile cable that provide
   },
   vl601: {
     id: "vl601",
-    name: "Albert Nebel Series+ VL601+",
+    name: "Albert Nebel Series+ 601+",
     description: `While plugged in, the Albert Nebel 601+ violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Albert Nebel violins, violas, and cellos provide famous quality at a modest price. These instruments are crafted from aged European tonewoods and are varnished by hand in the Eastman workshop.
 
 The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge. Our proprietary 3.5 mm jack is used as the end button on the violins and violas making it unnoticeable.
@@ -124,7 +124,7 @@ Each Series+ instrument comes with a lightweight, low-profile cable that provide
   },
   vl701: {
     id: "vl701",
-    name: "Rudoulf Doetsch Series+ VL701+",
+    name: "Rudoulf Doetsch Series+ 701+",
     description: `While plugged in, the Rudoulf Doetsch+ 701 violin keeps the natural warmth of a traditional violin while adding edge and a whole new dimension of musical possibilities. Rudoulf Doetsch instruments are handcrafted by our master luthiers and are hailed by teachers and performers as some of America's best German tonewood instruments. They feature a highly select spruce top with maple back, sides and scrolls, and a hand applied antique-style, multi-layer spirit varnish. The result is an instrument that is professional in both appearance and sound.
 
 Rudoulf Doetsch violins, violas, and cellos provide famous quality at a modest price. These instruments are crafted from aged European tonewoods and are varnished by hand in the Eastman workshop. The unique pickup system is embedded into the spruce top of the instrument before varnishing with no disturbance to the bridge.
