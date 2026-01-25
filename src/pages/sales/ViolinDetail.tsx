@@ -22,16 +22,16 @@ import bwl1000Front from "@/assets/violins/bwl1000-front.png";
 import bwl1000Back from "@/assets/violins/bwl1000-back.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import dimitriBack from "@/assets/violins/dimitri-back.png";
-import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
-import gioveiniSapiroBack from "@/assets/violins/gioveini-sapiro-back.png";
+import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
+import gioveiniSapiro2Back from "@/assets/violins/gioveini-sapiro2-back.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
 import hiroshiKonoBack from "@/assets/violins/hiroshi-kono-back.png";
-import joeFarleyFront from "@/assets/violins/joe-farley-front.png";
-import joeFarleyBack from "@/assets/violins/joe-farley-back.png";
+import joeFarley1Front from "@/assets/violins/joe-farley1-front.png";
+import joeFarley2Back from "@/assets/violins/joe-farley2-back.png";
 import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
 import jurgenKlierBack from "@/assets/violins/jurgen-klier-back.png";
-import lhFront from "@/assets/violins/lh-front.png";
-import lhBack from "@/assets/violins/lh-back.png";
+import lh1Front from "@/assets/violins/lh1-front.png";
+import lh2Back from "@/assets/violins/lh2-back.png";
 
 interface ViolinSpecs {
   finish?: string;
@@ -171,7 +171,7 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
   "gioveini-sapiro": {
     id: "gioveini-sapiro",
     name: "Gioveini Sapiro Naples 1902",
-    images: [gioveiniSapiroFront, gioveiniSapiroBack],
+    images: [gioveiniSapiro1Front, gioveiniSapiro2Back],
     comingSoon: true,
   },
   "hiroshi-kono": {
@@ -183,7 +183,7 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
   "joe-farley": {
     id: "joe-farley",
     name: "Joe Farley",
-    images: [joeFarleyFront, joeFarleyBack],
+    images: [joeFarley1Front, joeFarley2Back],
     comingSoon: true,
   },
   "jurgen-klier": {
@@ -195,7 +195,7 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
   lh: {
     id: "lh",
     name: "L&H",
-    images: [lhFront, lhBack],
+    images: [lh1Front, lh2Back],
     comingSoon: true,
   },
 };
