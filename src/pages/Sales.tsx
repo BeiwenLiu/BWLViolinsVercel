@@ -14,11 +14,11 @@ import artFront from "@/assets/violins/art-front.png";
 import bwl600Front from "@/assets/violins/bwl600-front.png";
 import bwl1000Front from "@/assets/violins/bwl1000-front.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
-import gioveiniSapiroFront from "@/assets/violins/gioveini-sapiro-front.png";
+import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
-import joeFarleyFront from "@/assets/violins/joe-farley-front.png";
+import joeFarley1Front from "@/assets/violins/joe-farley1-front.png";
 import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
-import lhFront from "@/assets/violins/lh-front.png";
+import lh1Front from "@/assets/violins/lh1-front.png";
 
 interface ViolinProduct {
   id: string;
@@ -74,7 +74,7 @@ const violinProducts: ViolinProduct[] = [
     id: "gioveini-sapiro",
     name: "Gioveini Sapiro Naples 1902",
     shortDescription: "Description coming soon",
-    image: gioveiniSapiroFront,
+    image: gioveiniSapiro1Front,
   },
   {
     id: "hiroshi-kono",
@@ -86,7 +86,7 @@ const violinProducts: ViolinProduct[] = [
     id: "joe-farley",
     name: "Joe Farley",
     shortDescription: "Description coming soon",
-    image: joeFarleyFront,
+    image: joeFarley1Front,
   },
   {
     id: "jurgen-klier",
@@ -98,7 +98,7 @@ const violinProducts: ViolinProduct[] = [
     id: "lh",
     name: "L&H",
     shortDescription: "Description coming soon",
-    image: lhFront,
+    image: lh1Front,
   },
 ];
 
