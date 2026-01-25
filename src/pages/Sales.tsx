@@ -4,7 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Music2 } from "lucide-react";
 
 // Eastman violin imports
-import vl145Front from "@/assets/eastman/vl145-front.avif";
+import vl80Front from "@/assets/eastman/vl80-front.png";
+import vl100Front from "@/assets/eastman/vl100-front.jpg";
+import vl200Front from "@/assets/eastman/vl200-front.jpg";
 import vl405Front from "@/assets/eastman/vl405-front.avif";
 import vl601Front from "@/assets/eastman/vl601-front.avif";
 import vl701Front from "@/assets/eastman/vl701-front.avif";
@@ -28,6 +30,24 @@ interface ViolinProduct {
 }
 
 const violinProducts: ViolinProduct[] = [
+  {
+    id: "vl80",
+    name: "Eastman 80",
+    shortDescription: "Description coming soon",
+    image: vl80Front,
+  },
+  {
+    id: "vl100",
+    name: "Eastman 100",
+    shortDescription: "Description coming soon",
+    image: vl100Front,
+  },
+  {
+    id: "vl200",
+    name: "Eastman 200",
+    shortDescription: "Description coming soon",
+    image: vl200Front,
+  },
   {
     id: "vl405",
     name: "Andreas Eastman Series+ VL405+",
