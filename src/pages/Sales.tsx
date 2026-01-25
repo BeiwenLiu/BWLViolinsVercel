@@ -50,19 +50,19 @@ const violinProducts: ViolinProduct[] = [
   },
   {
     id: "vl405",
-    name: "Andreas Eastman Series+ VL405+",
+    name: "Andreas Eastman Series+ 405+",
     shortDescription: "Premium violin with antiqued spirit varnish and German-style finishing",
     image: vl405Front,
   },
   {
     id: "vl601",
-    name: "Albert Nebel Series+ VL601+",
+    name: "Albert Nebel Series+ 601+",
     shortDescription: "Professional quality with aged European tonewoods and Guarneri pattern",
     image: vl601Front,
   },
   {
     id: "vl701",
-    name: "Rudoulf Doetsch Series+ VL701+",
+    name: "Rudoulf Doetsch Series+ 701+",
     shortDescription: "Master luthier crafted with German tonewoods and professional finish",
     image: vl701Front,
   },
