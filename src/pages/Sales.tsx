@@ -175,7 +175,6 @@ interface CategoryCard {
 }
 
 const otherCategories: CategoryCard[] = [
-  { title: "Violas", description: "Quality violas for the discerning musician" },
   { title: "Cellos", description: "Professional cellos from around the world" },
   { title: "Bass", description: "Quality bass instruments" },
   { title: "Bows", description: "Well-balanced bows for optimal performance" },
@@ -218,6 +217,40 @@ const Sales = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {violin.shortDescription}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Violas Section with Product Cards */}
+          <div className="mb-12">
+            <h2 className="section-heading">Violas</h2>
+            <p className="section-subheading">Quality violas for the discerning musician</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {violaProducts.map((viola) => (
+                <Link key={viola.id} to={`/sales/violas/${viola.id}`}>
+                  <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="aspect-[4/5] overflow-hidden bg-muted flex items-center justify-center p-4">
+                      {viola.image ? (
+                        <img
+                          src={viola.image}
+                          alt={viola.name}
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <Music2 className="h-24 w-24 text-primary/30" />
+                      )}
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-serif text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {viola.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {viola.shortDescription}
                       </p>
                     </CardContent>
                   </Card>
