@@ -3,17 +3,11 @@ import PageHeader from "@/components/ui/PageHeader";
 import { ArrowLeft, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
-// Viola imports
-import joeFarleyViolaFront from "@/assets/violas/joe-farley-viola-front.png";
-import joeFarleyViolaBack from "@/assets/violas/joe-farley-viola-back.png";
-import ludovicLassaratViolaFront from "@/assets/violas/ludovic-lassarat-viola-front.png";
-import ludovicLassaratViolaBack from "@/assets/violas/ludovic-lassarat-viola-back.png";
-import pragerViolaFront from "@/assets/violas/prager-viola-front.png";
-import pragerViolaBack from "@/assets/violas/prager-viola-back.png";
-import sonataViolaFront from "@/assets/violas/sonata-viola-front.png";
-import sonataViolaBack from "@/assets/violas/sonata-viola-back.png";
+// Cello imports
+import jjCelloFront from "@/assets/cellos/jj-cello-front.png";
+import jjCelloBack from "@/assets/cellos/jj-cello-back.png";
 
-interface ViolaSpecs {
+interface CelloSpecs {
   finish?: string;
   fingerboard?: string;
   top?: string;
@@ -26,51 +20,33 @@ interface ViolaSpecs {
   availableSizes?: string;
 }
 
-interface ViolaData {
+interface CelloData {
   id: string;
   name: string;
   description?: string;
   images: string[];
-  specs?: ViolaSpecs;
+  specs?: CelloSpecs;
   comingSoon?: boolean;
 }
 
-const violaData: Record<string, ViolaData> = {
-  "joe-farley-viola": {
-    id: "joe-farley-viola",
-    name: "Joe Farley",
-    images: [joeFarleyViolaFront, joeFarleyViolaBack],
-    comingSoon: true,
-  },
-  "ludovic-lassarat-viola": {
-    id: "ludovic-lassarat-viola",
-    name: "Ludovic Lassarat",
-    images: [ludovicLassaratViolaFront, ludovicLassaratViolaBack],
-    comingSoon: true,
-  },
-  "prager-viola": {
-    id: "prager-viola",
-    name: "Prager",
-    images: [pragerViolaFront, pragerViolaBack],
-    comingSoon: true,
-  },
-  "sonata-viola": {
-    id: "sonata-viola",
-    name: "Sonata",
-    images: [sonataViolaFront, sonataViolaBack],
+const celloData: Record<string, CelloData> = {
+  "jj-cello": {
+    id: "jj-cello",
+    name: "J&J",
+    images: [jjCelloFront, jjCelloBack],
     comingSoon: true,
   },
 };
 
-const ViolaDetail = () => {
+const CelloDetail = () => {
   const { modelId } = useParams<{ modelId: string }>();
-  const viola = modelId ? violaData[modelId] : null;
+  const cello = modelId ? celloData[modelId] : null;
   const [selectedImage, setSelectedImage] = useState(0);
 
-  if (!viola) {
+  if (!cello) {
     return (
       <div className="container py-16 text-center">
-        <h1 className="text-2xl font-semibold mb-4">Viola Not Found</h1>
+        <h1 className="text-2xl font-semibold mb-4">Cello Not Found</h1>
         <Link to="/sales" className="text-primary hover:underline">
           Back to Sales
         </Link>
@@ -80,7 +56,7 @@ const ViolaDetail = () => {
 
   return (
     <div>
-      <PageHeader title={viola.name} subtitle="Viola" />
+      <PageHeader title={cello.name} subtitle="Cello" />
 
       <section className="py-16">
         <div className="container">
@@ -95,18 +71,18 @@ const ViolaDetail = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Image Gallery */}
             <div className="space-y-4">
-              {viola.images.length > 0 ? (
+              {cello.images.length > 0 ? (
                 <>
                   <div className="rounded-lg bg-muted flex items-center justify-center p-4">
                     <img
-                      src={viola.images[selectedImage]}
-                      alt={`${viola.name} - View ${selectedImage + 1}`}
+                      src={cello.images[selectedImage]}
+                      alt={`${cello.name} - View ${selectedImage + 1}`}
                       className="max-w-full max-h-[600px] w-auto h-auto object-contain"
                     />
                   </div>
-                  {viola.images.length > 1 && (
+                  {cello.images.length > 1 && (
                     <div className="flex gap-4 justify-center">
-                      {viola.images.map((image, index) => (
+                      {cello.images.map((image, index) => (
                         <button
                           key={index}
                           onClick={() => setSelectedImage(index)}
@@ -118,7 +94,7 @@ const ViolaDetail = () => {
                         >
                           <img
                             src={image}
-                            alt={`${viola.name} - Thumbnail ${index + 1}`}
+                            alt={`${cello.name} - Thumbnail ${index + 1}`}
                             className="max-w-full max-h-full object-contain"
                           />
                         </button>
@@ -135,7 +111,7 @@ const ViolaDetail = () => {
 
             {/* Details */}
             <div className="space-y-8">
-              {viola.comingSoon && (
+              {cello.comingSoon && (
                 <div className="flex items-center gap-3 p-4 bg-honey-gold/10 border border-honey-gold/30 rounded-lg">
                   <AlertCircle className="h-5 w-5 text-honey-gold" />
                   <p className="text-muted-foreground">
@@ -145,79 +121,79 @@ const ViolaDetail = () => {
                 </div>
               )}
 
-              {viola.description && (
+              {cello.description && (
                 <div>
                   <h2 className="font-serif text-2xl font-semibold mb-4">Description</h2>
                   <div className="text-muted-foreground space-y-4">
-                    {viola.description.split("\n\n").map((paragraph, index) => (
+                    {cello.description.split("\n\n").map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
                 </div>
               )}
 
-              {viola.specs && (
+              {cello.specs && (
                 <div>
                   <h2 className="font-serif text-2xl font-semibold mb-4">Specifications</h2>
                   <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {viola.specs.finish && (
+                    {cello.specs.finish && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Finish</dt>
-                        <dd className="font-medium">{viola.specs.finish}</dd>
+                        <dd className="font-medium">{cello.specs.finish}</dd>
                       </div>
                     )}
-                    {viola.specs.fingerboard && (
+                    {cello.specs.fingerboard && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Fingerboard</dt>
-                        <dd className="font-medium">{viola.specs.fingerboard}</dd>
+                        <dd className="font-medium">{cello.specs.fingerboard}</dd>
                       </div>
                     )}
-                    {viola.specs.top && (
+                    {cello.specs.top && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Top</dt>
-                        <dd className="font-medium">{viola.specs.top}</dd>
+                        <dd className="font-medium">{cello.specs.top}</dd>
                       </div>
                     )}
-                    {viola.specs.backRibs && (
+                    {cello.specs.backRibs && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Back/Ribs</dt>
-                        <dd className="font-medium">{viola.specs.backRibs}</dd>
+                        <dd className="font-medium">{cello.specs.backRibs}</dd>
                       </div>
                     )}
-                    {viola.specs.purfling && (
+                    {cello.specs.purfling && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Purfling</dt>
-                        <dd className="font-medium">{viola.specs.purfling}</dd>
+                        <dd className="font-medium">{cello.specs.purfling}</dd>
                       </div>
                     )}
-                    {viola.specs.bridge && (
+                    {cello.specs.bridge && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Bridge</dt>
-                        <dd className="font-medium">{viola.specs.bridge}</dd>
+                        <dd className="font-medium">{cello.specs.bridge}</dd>
                       </div>
                     )}
-                    {viola.specs.fittings && (
+                    {cello.specs.fittings && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Fittings</dt>
-                        <dd className="font-medium">{viola.specs.fittings}</dd>
+                        <dd className="font-medium">{cello.specs.fittings}</dd>
                       </div>
                     )}
-                    {viola.specs.electronics && (
+                    {cello.specs.electronics && (
                       <div className="bg-muted p-4 rounded-lg sm:col-span-2">
                         <dt className="text-sm text-muted-foreground">Electronics</dt>
-                        <dd className="font-medium">{viola.specs.electronics}</dd>
+                        <dd className="font-medium">{cello.specs.electronics}</dd>
                       </div>
                     )}
-                    {viola.specs.availablePatterns && (
+                    {cello.specs.availablePatterns && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Available Patterns</dt>
-                        <dd className="font-medium">{viola.specs.availablePatterns}</dd>
+                        <dd className="font-medium">{cello.specs.availablePatterns}</dd>
                       </div>
                     )}
-                    {viola.specs.availableSizes && (
+                    {cello.specs.availableSizes && (
                       <div className="bg-muted p-4 rounded-lg">
                         <dt className="text-sm text-muted-foreground">Available Sizes</dt>
-                        <dd className="font-medium">{viola.specs.availableSizes}</dd>
+                        <dd className="font-medium">{cello.specs.availableSizes}</dd>
                       </div>
                     )}
                   </dl>
@@ -226,7 +202,7 @@ const ViolaDetail = () => {
 
               <div className="pt-4">
                 <Link
-                  to={`/sales/inquiry?instrument=${encodeURIComponent(viola.name + " Viola")}`}
+                  to={`/sales/inquiry?instrument=${encodeURIComponent(cello.name + " Cello")}`}
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors text-lg"
                 >
                   Inquire About This Instrument
@@ -240,4 +216,4 @@ const ViolaDetail = () => {
   );
 };
 
-export default ViolaDetail;
+export default CelloDetail;

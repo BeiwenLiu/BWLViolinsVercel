@@ -28,6 +28,12 @@ import vincentiusPottiglioneFront from "@/assets/violins/vincentius-pottiglione-
 
 // Viola imports
 import joeFarleyViolaFront from "@/assets/violas/joe-farley-viola-front.png";
+import ludovicLassaratViolaFront from "@/assets/violas/ludovic-lassarat-viola-front.png";
+import pragerViolaFront from "@/assets/violas/prager-viola-front.png";
+import sonataViolaFront from "@/assets/violas/sonata-viola-front.png";
+
+// Cello imports
+import jjCelloFront from "@/assets/cellos/jj-cello-front.png";
 
 interface ViolinProduct {
   id: string;
@@ -167,6 +173,40 @@ const violaProducts: ViolaProduct[] = [
     shortDescription: "Description coming soon",
     image: joeFarleyViolaFront,
   },
+  {
+    id: "ludovic-lassarat-viola",
+    name: "Ludovic Lassarat",
+    shortDescription: "Description coming soon",
+    image: ludovicLassaratViolaFront,
+  },
+  {
+    id: "prager-viola",
+    name: "Prager",
+    shortDescription: "Description coming soon",
+    image: pragerViolaFront,
+  },
+  {
+    id: "sonata-viola",
+    name: "Sonata",
+    shortDescription: "Description coming soon",
+    image: sonataViolaFront,
+  },
+];
+
+interface CelloProduct {
+  id: string;
+  name: string;
+  shortDescription: string;
+  image?: string;
+}
+
+const celloProducts: CelloProduct[] = [
+  {
+    id: "jj-cello",
+    name: "J&J",
+    shortDescription: "Description coming soon",
+    image: jjCelloFront,
+  },
 ];
 
 interface CategoryCard {
@@ -175,7 +215,6 @@ interface CategoryCard {
 }
 
 const otherCategories: CategoryCard[] = [
-  { title: "Cellos", description: "Professional cellos from around the world" },
   { title: "Bass", description: "Quality bass instruments" },
   { title: "Bows", description: "Well-balanced bows for optimal performance" },
   { title: "Accessories", description: "Essential accessories for string players" },
@@ -251,6 +290,40 @@ const Sales = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {viola.shortDescription}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Cellos Section with Product Cards */}
+          <div className="mb-12">
+            <h2 className="section-heading">Cellos</h2>
+            <p className="section-subheading">Professional cellos from around the world</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {celloProducts.map((cello) => (
+                <Link key={cello.id} to={`/sales/cellos/${cello.id}`}>
+                  <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="aspect-[4/5] overflow-hidden bg-muted flex items-center justify-center p-4">
+                      {cello.image ? (
+                        <img
+                          src={cello.image}
+                          alt={cello.name}
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <Music2 className="h-24 w-24 text-primary/30" />
+                      )}
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-serif text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {cello.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {cello.shortDescription}
                       </p>
                     </CardContent>
                   </Card>
