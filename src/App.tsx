@@ -10,6 +10,7 @@ import Sales from "./pages/Sales";
 import EastmanInstruments from "./pages/sales/EastmanInstruments";
 import EastmanViolinDetail from "./pages/sales/EastmanViolinDetail";
 import ViolinDetail from "./pages/sales/ViolinDetail";
+import ViolaDetail from "./pages/sales/ViolaDetail";
 import InstrumentInquiry from "./pages/sales/InstrumentInquiry";
 import Rentals from "./pages/Rentals";
 import Service from "./pages/Service";
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/sales/violins/eastman" element={<EastmanInstruments />} />
             <Route path="/sales/violins/eastman/:modelId" element={<EastmanViolinDetail />} />
             <Route path="/sales/violins/:modelId" element={<ViolinDetail />} />
+            <Route path="/sales/violas/:modelId" element={<ViolaDetail />} />
             <Route path="/sales/inquiry" element={<InstrumentInquiry />} />
             <Route path="/sales/*" element={<Sales />} />
             <Route path="/rentals" element={<Rentals />} />

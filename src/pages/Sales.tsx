@@ -13,14 +13,21 @@ import vl701Front from "@/assets/eastman/vl701-front.avif";
 
 // Other violin imports
 import artFront from "@/assets/violins/art-front.png";
+import bwl150Front from "@/assets/violins/bwl150-front.png";
 import bwl600Front from "@/assets/violins/bwl600-front.png";
 import bwl1000Front from "@/assets/violins/bwl1000-front.png";
+import bwl1500Front from "@/assets/violins/bwl1500-front.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
 import joeFarley1Front from "@/assets/violins/joe-farley1-front.png";
 import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
 import lh1Front from "@/assets/violins/lh1-front.png";
+import martinBeckFront from "@/assets/violins/martin-beck-front.png";
+import vincentiusPottiglioneFront from "@/assets/violins/vincentius-pottiglione-front.png";
+
+// Viola imports
+import joeFarleyViolaFront from "@/assets/violas/joe-farley-viola-front.png";
 
 interface ViolinProduct {
   id: string;
@@ -73,6 +80,12 @@ const violinProducts: ViolinProduct[] = [
     image: artFront,
   },
   {
+    id: "bwl-150",
+    name: "BWL 150",
+    shortDescription: "Description coming soon",
+    image: bwl150Front,
+  },
+  {
     id: "bwl-600",
     name: "BWL 600",
     shortDescription: "Description coming soon",
@@ -83,6 +96,12 @@ const violinProducts: ViolinProduct[] = [
     name: "BWL 1000",
     shortDescription: "Description coming soon",
     image: bwl1000Front,
+  },
+  {
+    id: "bwl-1500",
+    name: "BWL 1500",
+    shortDescription: "Description coming soon",
+    image: bwl1500Front,
   },
   {
     id: "dimitri",
@@ -120,6 +139,34 @@ const violinProducts: ViolinProduct[] = [
     shortDescription: "Description coming soon",
     image: lh1Front,
   },
+  {
+    id: "martin-beck",
+    name: "Martin Beck",
+    shortDescription: "Description coming soon",
+    image: martinBeckFront,
+  },
+  {
+    id: "vincentius-pottiglione",
+    name: "Vincentius Pottiglione",
+    shortDescription: "Description coming soon",
+    image: vincentiusPottiglioneFront,
+  },
+];
+
+interface ViolaProduct {
+  id: string;
+  name: string;
+  shortDescription: string;
+  image?: string;
+}
+
+const violaProducts: ViolaProduct[] = [
+  {
+    id: "joe-farley-viola",
+    name: "Joe Farley",
+    shortDescription: "Description coming soon",
+    image: joeFarleyViolaFront,
+  },
 ];
 
 interface CategoryCard {
@@ -128,7 +175,6 @@ interface CategoryCard {
 }
 
 const otherCategories: CategoryCard[] = [
-  { title: "Violas", description: "Quality violas for the discerning musician" },
   { title: "Cellos", description: "Professional cellos from around the world" },
   { title: "Bass", description: "Quality bass instruments" },
   { title: "Bows", description: "Well-balanced bows for optimal performance" },
@@ -171,6 +217,40 @@ const Sales = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {violin.shortDescription}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Violas Section with Product Cards */}
+          <div className="mb-12">
+            <h2 className="section-heading">Violas</h2>
+            <p className="section-subheading">Quality violas for the discerning musician</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {violaProducts.map((viola) => (
+                <Link key={viola.id} to={`/sales/violas/${viola.id}`}>
+                  <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="aspect-[4/5] overflow-hidden bg-muted flex items-center justify-center p-4">
+                      {viola.image ? (
+                        <img
+                          src={viola.image}
+                          alt={viola.name}
+                          className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ) : (
+                        <Music2 className="h-24 w-24 text-primary/30" />
+                      )}
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="font-serif text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {viola.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {viola.shortDescription}
                       </p>
                     </CardContent>
                   </Card>

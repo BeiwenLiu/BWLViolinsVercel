@@ -20,10 +20,14 @@ import vl701Back from "@/assets/eastman/vl701-back.avif";
 // Other violin imports
 import artFront from "@/assets/violins/art-front.png";
 import artBack from "@/assets/violins/art-back.png";
+import bwl150Front from "@/assets/violins/bwl150-front.png";
+import bwl150Back from "@/assets/violins/bwl150-back.png";
 import bwl600Front from "@/assets/violins/bwl600-front.png";
 import bwl600Back from "@/assets/violins/bwl600-back.png";
 import bwl1000Front from "@/assets/violins/bwl1000-front.png";
 import bwl1000Back from "@/assets/violins/bwl1000-back.png";
+import bwl1500Front from "@/assets/violins/bwl1500-front.png";
+import bwl1500Back from "@/assets/violins/bwl1500-back.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import dimitriBack from "@/assets/violins/dimitri-back.png";
 import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
@@ -36,6 +40,10 @@ import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
 import jurgenKlierBack from "@/assets/violins/jurgen-klier-back.png";
 import lh1Front from "@/assets/violins/lh1-front.png";
 import lh2Back from "@/assets/violins/lh2-back.png";
+import martinBeckFront from "@/assets/violins/martin-beck-front.png";
+import martinBeckBack from "@/assets/violins/martin-beck-back.png";
+import vincentiusPottiglioneFront from "@/assets/violins/vincentius-pottiglione-front.png";
+import vincentiusPottiglioneBack from "@/assets/violins/vincentius-pottiglione-back.png";
 
 interface ViolinSpecs {
   finish?: string;
@@ -150,6 +158,12 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
     images: [artFront, artBack],
     comingSoon: true,
   },
+  "bwl-150": {
+    id: "bwl-150",
+    name: "BWL 150",
+    images: [bwl150Front, bwl150Back],
+    comingSoon: true,
+  },
   "bwl-600": {
     id: "bwl-600",
     name: "BWL 600",
@@ -160,6 +174,12 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
     id: "bwl-1000",
     name: "BWL 1000",
     images: [bwl1000Front, bwl1000Back],
+    comingSoon: true,
+  },
+  "bwl-1500": {
+    id: "bwl-1500",
+    name: "BWL 1500",
+    images: [bwl1500Front, bwl1500Back],
     comingSoon: true,
   },
   dimitri: {
@@ -196,6 +216,18 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
     id: "lh",
     name: "L&H",
     images: [lh1Front, lh2Back],
+    comingSoon: true,
+  },
+  "martin-beck": {
+    id: "martin-beck",
+    name: "Martin Beck",
+    images: [martinBeckFront, martinBeckBack],
+    comingSoon: true,
+  },
+  "vincentius-pottiglione": {
+    id: "vincentius-pottiglione",
+    name: "Vincentius Pottiglione",
+    images: [vincentiusPottiglioneFront, vincentiusPottiglioneBack],
     comingSoon: true,
   },
 };
