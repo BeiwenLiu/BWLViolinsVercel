@@ -34,6 +34,10 @@ import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
 import gioveiniSapiro2Back from "@/assets/violins/gioveini-sapiro2-back.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
 import hiroshiKonoBack from "@/assets/violins/hiroshi-kono-back.png";
+import angelTaylor220Front from "@/assets/violins/Angel_Taylor_220_front_transparent.png";
+import angelTaylor220Back from "@/assets/violins/Angel_Taylor_220_back_transparent.png";
+import angelTaylor110Front from "@/assets/violins/Angel_Taylor_110front_transparent.png";
+import angelTaylor110Back from "@/assets/violins/Angel_Taylor_110back_transparent.png";
 import joeFarley1Front from "@/assets/violins/joe-farley1-front.png";
 import joeFarley2Back from "@/assets/violins/joe-farley2-back.png";
 import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
@@ -228,6 +232,18 @@ Our proprietary 3.5 mm jack is used as the end button on the violins and viola's
     id: "vincentius-pottiglione",
     name: "Vincentius Pottiglione",
     images: [vincentiusPottiglioneFront, vincentiusPottiglioneBack],
+    comingSoon: true,
+  },
+  "angel-taylor-220": {
+    id: "angel-taylor-220",
+    name: "Angel Taylor 220",
+    images: [angelTaylor220Front, angelTaylor220Back],
+    comingSoon: true,
+  },
+  "angel-taylor-110": {
+    id: "angel-taylor-110",
+    name: "Angel Taylor 110",
+    images: [angelTaylor110Front, angelTaylor110Back],
     comingSoon: true,
   },
 };

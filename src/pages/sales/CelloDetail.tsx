@@ -6,6 +6,12 @@ import { useState } from "react";
 // Cello imports
 import jjCelloFront from "@/assets/cellos/jj-cello-front.png";
 import jjCelloBack from "@/assets/cellos/jj-cello-back.png";
+import sebaftienKrinerFront from "@/assets/cellos/Sebaftien_Kriner_front_transparent.png";
+import sebaftienKrinerBack from "@/assets/cellos/Sebaftien_Kriner_back_transparent.png";
+import lApprentiFront from "@/assets/cellos/L__Apprenti_front_transparent.png";
+import lApprentiBack from "@/assets/cellos/L__Apprenti_back_transparent.png";
+import krutz300Front from "@/assets/cellos/Krutz300_front_transparent.png";
+import krutz300Back from "@/assets/cellos/Krutz300_back_transparent.png";
 
 interface CelloSpecs {
   finish?: string;
@@ -34,6 +40,24 @@ const celloData: Record<string, CelloData> = {
     id: "jj-cello",
     name: "J&J",
     images: [jjCelloFront, jjCelloBack],
+    comingSoon: true,
+  },
+  "sebaftien-kriner-cello": {
+    id: "sebaftien-kriner-cello",
+    name: "Sebaftien Kriner",
+    images: [sebaftienKrinerFront, sebaftienKrinerBack],
+    comingSoon: true,
+  },
+  "l-apprenti-cello": {
+    id: "l-apprenti-cello",
+    name: "L'Apprenti",
+    images: [lApprentiFront, lApprentiBack],
+    comingSoon: true,
+  },
+  "krutz-300-cello": {
+    id: "krutz-300-cello",
+    name: "Krutz 300",
+    images: [krutz300Front, krutz300Back],
     comingSoon: true,
   },
 };

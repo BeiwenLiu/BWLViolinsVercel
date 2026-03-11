@@ -20,6 +20,8 @@ import bwl1500Front from "@/assets/violins/bwl1500-front.png";
 import dimitriFront from "@/assets/violins/dimitri-front.png";
 import gioveiniSapiro1Front from "@/assets/violins/gioveini-sapiro1-front.png";
 import hiroshiKonoFront from "@/assets/violins/hiroshi-kono-front.png";
+import angelTaylor220Front from "@/assets/violins/Angel_Taylor_220_front_transparent.png";
+import angelTaylor110Front from "@/assets/violins/Angel_Taylor_110front_transparent.png";
 import joeFarley1Front from "@/assets/violins/joe-farley1-front.png";
 import jurgenKlierFront from "@/assets/violins/jurgen-klier-front.png";
 import lh1Front from "@/assets/violins/lh1-front.png";
@@ -38,6 +40,9 @@ import martinBeckViolaFront from "@/assets/violas/Martin-Beck_front__1__transpar
 
 // Cello imports
 import jjCelloFront from "@/assets/cellos/jj-cello-front.png";
+import sebaftienKrinerFront from "@/assets/cellos/Sebaftien_Kriner_front_transparent.png";
+import lApprentiFront from "@/assets/cellos/L__Apprenti_front_transparent.png";
+import krutz300Front from "@/assets/cellos/Krutz300_front_transparent.png";
 
 interface ViolinProduct {
   id: string;
@@ -161,6 +166,18 @@ const violinProducts: ViolinProduct[] = [
     shortDescription: "Description coming soon",
     image: vincentiusPottiglioneFront,
   },
+  {
+    id: "angel-taylor-220",
+    name: "Angel Taylor 220",
+    shortDescription: "Description coming soon",
+    image: angelTaylor220Front,
+  },
+  {
+    id: "angel-taylor-110",
+    name: "Angel Taylor 110",
+    shortDescription: "Description coming soon",
+    image: angelTaylor110Front,
+  },
 ];
 
 interface ViolaProduct {
@@ -234,6 +251,24 @@ const celloProducts: CelloProduct[] = [
     name: "J&J",
     shortDescription: "Description coming soon",
     image: jjCelloFront,
+  },
+  {
+    id: "sebaftien-kriner-cello",
+    name: "Sebaftien Kriner",
+    shortDescription: "Description coming soon",
+    image: sebaftienKrinerFront,
+  },
+  {
+    id: "l-apprenti-cello",
+    name: "L'Apprenti",
+    shortDescription: "Description coming soon",
+    image: lApprentiFront,
+  },
+  {
+    id: "krutz-300-cello",
+    name: "Krutz 300",
+    shortDescription: "Description coming soon",
+    image: krutz300Front,
   },
 ];
 
