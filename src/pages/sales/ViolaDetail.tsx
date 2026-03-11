@@ -12,6 +12,14 @@ import pragerViolaFront from "@/assets/violas/prager-viola-front.png";
 import pragerViolaBack from "@/assets/violas/prager-viola-back.png";
 import sonataViolaFront from "@/assets/violas/sonata-viola-front.png";
 import sonataViolaBack from "@/assets/violas/sonata-viola-back.png";
+import hagenViolaFront from "@/assets/violas/Hagen_front__1__transparent.png";
+import hagenViolaBack from "@/assets/violas/Hagen_back__1__transparent.png";
+import hiroshiKonoViolaFront from "@/assets/violas/Hiroshi-Kono-1_front__1__transparent.png";
+import hiroshiKonoViolaBack from "@/assets/violas/Hiroshi-Kono-back__1__transparent.png";
+import klierViolaFront from "@/assets/violas/Klier_viola_front__1__transparent.png";
+import klierViolaBack from "@/assets/violas/Klier_viola_back__1__transparent.png";
+import martinBeckViolaFront from "@/assets/violas/Martin-Beck_front__1__transparent.png";
+import martinBeckViolaBack from "@/assets/violas/Martin-Beck_back__1__transparent.png";
 
 interface ViolaSpecs {
   finish?: string;
@@ -58,6 +66,30 @@ const violaData: Record<string, ViolaData> = {
     id: "sonata-viola",
     name: "Sonata",
     images: [sonataViolaFront, sonataViolaBack],
+    comingSoon: true,
+  },
+  "hagen-viola": {
+    id: "hagen-viola",
+    name: "Hagen",
+    images: [hagenViolaFront, hagenViolaBack],
+    comingSoon: true,
+  },
+  "hiroshi-kono-viola": {
+    id: "hiroshi-kono-viola",
+    name: "Hiroshi Kono",
+    images: [hiroshiKonoViolaFront, hiroshiKonoViolaBack],
+    comingSoon: true,
+  },
+  "klier-viola": {
+    id: "klier-viola",
+    name: "Klier",
+    images: [klierViolaFront, klierViolaBack],
+    comingSoon: true,
+  },
+  "martin-beck-viola": {
+    id: "martin-beck-viola",
+    name: "Martin Beck",
+    images: [martinBeckViolaFront, martinBeckViolaBack],
     comingSoon: true,
   },
 };

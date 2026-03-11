@@ -31,6 +31,10 @@ import joeFarleyViolaFront from "@/assets/violas/joe-farley-viola-front.png";
 import ludovicLassaratViolaFront from "@/assets/violas/ludovic-lassarat-viola-front.png";
 import pragerViolaFront from "@/assets/violas/prager-viola-front.png";
 import sonataViolaFront from "@/assets/violas/sonata-viola-front.png";
+import hagenViolaFront from "@/assets/violas/Hagen_front__1__transparent.png";
+import hiroshiKonoViolaFront from "@/assets/violas/Hiroshi-Kono-1_front__1__transparent.png";
+import klierViolaFront from "@/assets/violas/Klier_viola_front__1__transparent.png";
+import martinBeckViolaFront from "@/assets/violas/Martin-Beck_front__1__transparent.png";
 
 // Cello imports
 import jjCelloFront from "@/assets/cellos/jj-cello-front.png";
@@ -190,6 +194,30 @@ const violaProducts: ViolaProduct[] = [
     name: "Sonata",
     shortDescription: "Description coming soon",
     image: sonataViolaFront,
+  },
+  {
+    id: "hagen-viola",
+    name: "Hagen",
+    shortDescription: "Description coming soon",
+    image: hagenViolaFront,
+  },
+  {
+    id: "hiroshi-kono-viola",
+    name: "Hiroshi Kono",
+    shortDescription: "Description coming soon",
+    image: hiroshiKonoViolaFront,
+  },
+  {
+    id: "klier-viola",
+    name: "Klier",
+    shortDescription: "Description coming soon",
+    image: klierViolaFront,
+  },
+  {
+    id: "martin-beck-viola",
+    name: "Martin Beck",
+    shortDescription: "Description coming soon",
+    image: martinBeckViolaFront,
   },
 ];
 
