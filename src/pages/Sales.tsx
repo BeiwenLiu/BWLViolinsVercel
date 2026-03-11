@@ -224,7 +224,7 @@ const Sales = () => {
   return (
     <div>
       <PageHeader
-        title="String Sales"
+        title="Sales"
         subtitle="Quality string instruments, bows, and accessories for musicians of all levels"
       />
 
